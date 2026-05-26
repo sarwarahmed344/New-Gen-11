@@ -1,26 +1,45 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Hero } from "@/components/Hero";
+import { PlayerGrid } from "@/components/PlayerGrid";
+import { PlayerFeature } from "@/components/PlayerFeature";
+import { Outro } from "@/components/Outro";
 
 export const Route = createFileRoute("/")({
   component: Index,
+  head: () => ({
+    meta: [
+      { title: "New Generation Eleven — Blue Lock" },
+      { name: "description", content: "A scrollytelling tribute to the New Generation Eleven. Egoists only." },
+    ],
+  }),
 });
 
-// IMPORTANT: Replace this placeholder. For sites with multiple pages (About, Services, Contact, etc.),
-// create separate route files (about.tsx, services.tsx, contact.tsx) — don't put all pages in this file.
-function PlaceholderIndex() {
-  return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
-  );
-}
-
 function Index() {
-  return <PlaceholderIndex />;
+  return (
+    <main className="bg-background text-foreground">
+      <Hero />
+      <PlayerGrid />
+      <PlayerFeature
+        num="10"
+        name="Sae Itoshi"
+        country="Japan"
+        club="La Real"
+        position="Midfielder"
+        tag1="BEAUTIFUL DESTRUCTION"
+        tag2="THE PRODIGY"
+        panels={["a", "b", "c", "d"]}
+      />
+      <PlayerFeature
+        num="09"
+        name="Michael Kaiser"
+        country="Germany"
+        club="Bastard München"
+        position="Forward"
+        tag1="KAISER IMPACT"
+        tag2="THE EMPEROR"
+        panels={["a", "b", "c", "d"]}
+      />
+      <Outro />
+    </main>
+  );
 }
