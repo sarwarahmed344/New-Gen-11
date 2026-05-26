@@ -165,3 +165,11 @@
   box-shadow: 0 0 0 1px #fff, 0 0 40px rgba(255,255,255,0.25);
 }
 
+.manga-cutout {
+  filter: invert(1) grayscale(1) contrast(1.15);
+  mix-blend-mode: screen;
+  filter: invert(1) grayscale(1) contrast(1.15) drop-shadow(0 0 24px rgba(255,255,255,0.08));
+}
+
+
+
