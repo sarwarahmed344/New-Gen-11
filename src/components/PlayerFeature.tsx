@@ -57,12 +57,13 @@ export function PlayerFeature({
             <img
               src={heroImage}
               alt={`${name} manga cutout`}
-              className="h-full w-auto object-contain select-none pointer-events-none"
+              className="manga-cutout h-full w-auto object-contain select-none pointer-events-none"
               loading="lazy"
               draggable={false}
             />
           </motion.div>
         </motion.div>
+
 
         <motion.div
           style={{ opacity: l2Opacity, x: l2X }}
@@ -75,10 +76,11 @@ export function PlayerFeature({
                 <img
                   src={bannerImage}
                   alt={`${name} manga action panel`}
-                  className="h-full w-auto object-contain select-none pointer-events-none"
+                  className="manga-cutout h-full w-auto object-contain select-none pointer-events-none"
                   loading="lazy"
                   draggable={false}
                 />
+
               </div>
               <span className="mono text-[10px] tracking-[0.3em] whitespace-nowrap shrink-0">{tag2} ▮</span>
             </div>
@@ -93,10 +95,11 @@ export function PlayerFeature({
             style={{ y: l3ImageY }}
             src={closeupImage}
             alt={`${name} close-up manga cutout`}
-            className="absolute right-0 md:right-10 bottom-0 h-[55vh] md:h-[88vh] w-auto object-contain opacity-35"
+            className="manga-cutout absolute right-0 md:right-10 bottom-0 h-[55vh] md:h-[88vh] w-auto object-contain opacity-35"
             loading="lazy"
             draggable={false}
           />
+
 
           <div className="text-center leading-none z-10">
             <div className="text-[38vw] md:text-[24vw] font-bold tracking-tighter leading-[0.8]">{num}</div>
