@@ -72,19 +72,15 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "blue Lock New Gen 11 - Under Pressure only the best performs" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "blue Lock New Gen 11 - Under Pressure only the best performs" },
+      { title: "NewGen11 — Blue Lock's Most Dangerous U-20 Squad" },
+      { name: "description", content: "Blue Lock New Gen 11 — under pressure, only the best perform. Six revealed, five classified." },
+      { name: "author", content: "AS" },
+      { property: "og:site_name", content: "NewGen11" },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
-      { name: "twitter:title", content: "Lovable App" },
-      { name: "twitter:description", content: "blue Lock New Gen 11 - Under Pressure only the best performs" },
-      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/wyTrppZVjTgft8hdt3sFenZtc9o1/social-images/social-1779785587533-download.webp" },
-      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/wyTrppZVjTgft8hdt3sFenZtc9o1/social-images/social-1779785587533-download.webp" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:site", content: "@newgen11" },
     ],
+
     links: [
       {
         rel: "stylesheet",

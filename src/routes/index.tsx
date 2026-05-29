@@ -4,37 +4,48 @@ import { PlayerGrid } from "@/components/PlayerGrid";
 import { PlayerFeature } from "@/components/PlayerFeature";
 import { Outro } from "@/components/Outro";
 import { featuredPlayers } from "@/lib/players";
+import { AuraProvider } from "@/lib/aura-context";
+import { ProgressBar, TopBar, SideNav, GlobalFX } from "@/components/GlobalUI";
+
+const TITLE = "NewGen11 — Blue Lock's Most Dangerous U-20 Squad";
+const DESC = "Six revealed, five classified. The next generation of football egoists.";
+const OG_IMG = "https://storage.googleapis.com/gpt-engineer-file-uploads/wyTrppZVjTgft8hdt3sFenZtc9o1/social-images/social-1779785587533-download.webp";
 
 export const Route = createFileRoute("/")({
   component: Index,
   head: () => ({
     meta: [
-      { title: "New Generation Eleven — Blue Lock" },
-      { name: "description", content: "A black-and-white scrollytelling tribute to Blue Lock's New Generation Eleven." },
+      { title: TITLE },
+      { name: "description", content: DESC },
+      { property: "og:title", content: TITLE },
+      { property: "og:description", content: DESC },
+      { property: "og:type", content: "website" },
+      { property: "og:image", content: OG_IMG },
+      { property: "og:url", content: "https://newgen11-sarwar.lovable.app/" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: TITLE },
+      { name: "twitter:description", content: DESC },
+      { name: "twitter:image", content: OG_IMG },
     ],
+    links: [{ rel: "canonical", href: "https://newgen11-sarwar.lovable.app/" }],
   }),
 });
 
 function Index() {
   return (
-    <main className="bg-background text-foreground">
-      <Hero />
-      <PlayerGrid />
-      {featuredPlayers.map((player) => (
-        <PlayerFeature
-          key={player.name}
-          num={player.num}
-          name={player.name}
-          position={player.role}
-          tag1={player.tag1}
-          tag2={player.tag2}
-          heroImage={player.heroImage}
-          bannerImage={player.bannerImage}
-          closeupImage={player.closeupImage}
-        />
-      ))}
-      <Outro />
-    </main>
+    <AuraProvider>
+      <main className="bg-background text-foreground crosshair-cursor">
+        <ProgressBar />
+        <TopBar />
+        <SideNav />
+        <GlobalFX />
+        <Hero />
+        <PlayerGrid />
+        {featuredPlayers.map((player) => (
+          <PlayerFeature key={player.id} player={player} />
+        ))}
+        <Outro />
+      </main>
+    </AuraProvider>
   );
 }
-
