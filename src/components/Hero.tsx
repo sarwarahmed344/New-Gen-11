@@ -10,7 +10,8 @@ export function Hero() {
 
   return (
     <section ref={ref} className="relative h-screen flex items-center justify-center overflow-hidden">
-      <motion.div style={{ opacity, scale, y }} className="text-center px-6">
+      <div className="absolute inset-0 noise-overlay pointer-events-none" aria-hidden />
+      <motion.div style={{ opacity, scale, y }} className="text-center px-6 relative z-10">
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -23,7 +24,8 @@ export function Hero() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
-          className="text-5xl sm:text-7xl md:text-9xl font-bold uppercase leading-[0.9] tracking-tighter"
+          className="glitch text-5xl sm:text-7xl md:text-9xl font-bold uppercase leading-[0.9] tracking-tighter"
+          data-text="THE NEW GENERATION ELEVEN"
         >
           The New
           <br />
@@ -39,7 +41,7 @@ export function Hero() {
         >
           <span>EGOISTS ONLY</span>
           <span className="w-12 h-px bg-border" />
-          <span>SCROLL TO ENTER</span>
+          <span className="heartbeat text-foreground">SCROLL TO ENTER</span>
         </motion.div>
       </motion.div>
 
