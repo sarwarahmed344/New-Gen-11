@@ -45,7 +45,7 @@ export function Outro() {
         <span className="text-foreground">NewGen11</span>
         <span className="opacity-30">·</span>
         <a
-          href="https://as-arts-gallery.lovable.app"
+          href="https://asarts.lovable.app"
           target="_blank"
           rel="noreferrer"
           className="text-muted-foreground hover:text-foreground transition-colors story-link"

@@ -277,3 +277,20 @@
 }
 .story-link:hover::after { transform: scaleX(1); transform-origin: left; }
 
+/* === Blink pulse for next transmission === */
+.blink-pulse { animation: blink-pulse 1.8s ease-in-out infinite; }
+@keyframes blink-pulse {
+  0%, 100% { opacity: 0.35; }
+  50% { opacity: 1; }
+}
+
+/* === Formation pitch === */
+.pitch-lines {
+  background:
+    linear-gradient(90deg, transparent calc(50% - 1px), rgba(255,255,255,0.35) 50%, transparent calc(50% + 1px)),
+    linear-gradient(0deg, rgba(255,255,255,0.25) 0 1px, transparent 1px) top/100% 100% no-repeat,
+    linear-gradient(0deg, rgba(255,255,255,0.25) 0 1px, transparent 1px) bottom/100% 100% no-repeat,
+    linear-gradient(90deg, rgba(255,255,255,0.25) 0 1px, transparent 1px) left/100% 100% no-repeat,
+    linear-gradient(90deg, rgba(255,255,255,0.25) 0 1px, transparent 1px) right/100% 100% no-repeat;
+}
+

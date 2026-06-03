@@ -206,10 +206,32 @@ export const featuredPlayers: FeaturedPlayer[] = [
   },
 ];
 
-export const mysterySlots = [
-  { num: "04" },
-  { num: "03" },
-  { num: "02" },
-  { num: "01" },
-  { num: "11" },
+export type MysterySlot = {
+  num: string;
+  tagline: string;
+  next?: boolean;
+};
+
+export const mysterySlots: MysterySlot[] = [
+  {
+    num: "04",
+    tagline: "The quietest player on the pitch. The loudest name in the aftermath.",
+    next: true,
+  },
+  {
+    num: "03",
+    tagline: "Every team that faced him filed the same report. Unplayable.",
+  },
+  {
+    num: "02",
+    tagline: "He doesn't read the game. He rewrites it.",
+  },
+  {
+    num: "01",
+    tagline: "The last number. The first name they remember.",
+  },
+  {
+    num: "11",
+    tagline: "They built the rules of football before he arrived. He hasn't read them.",
+  },
 ];
