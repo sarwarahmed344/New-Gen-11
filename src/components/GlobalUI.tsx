@@ -26,15 +26,21 @@ export function TopBar() {
         >
           ← Back to Portfolio
         </a>
-        <button
-          onClick={toggle}
-          className="pointer-events-auto mono text-[10px] tracking-[0.3em] uppercase bg-background/70 backdrop-blur px-2 py-1 border border-border flex items-center gap-2 hover:bg-foreground hover:text-background transition-colors"
-          aria-label="Toggle color mode"
-        >
-          <span className={mode === "mono" ? "text-foreground" : "text-muted-foreground"}>MONO</span>
-          <span className="opacity-40">/</span>
-          <span className={mode === "vivid" ? "text-foreground" : "text-muted-foreground"}>VIVID</span>
-        </button>
+        <div className="pointer-events-auto relative group">
+          <button
+            onClick={toggle}
+            className="mono text-[10px] tracking-[0.3em] uppercase bg-background/70 backdrop-blur px-2 py-1 border border-border flex items-center gap-2 hover:bg-foreground hover:text-background transition-colors"
+            aria-label="Toggle display mode"
+            title="Toggle display mode"
+          >
+            <span className={mode === "mono" ? "text-foreground" : "text-muted-foreground"}>MONO</span>
+            <span className="opacity-40">/</span>
+            <span className={mode === "vivid" ? "text-foreground" : "text-muted-foreground"}>VIVID</span>
+          </button>
+          <span className="mono text-[9px] tracking-[0.25em] uppercase absolute top-full right-0 mt-1 px-2 py-1 border border-border bg-background/90 text-muted-foreground whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+            Toggle display mode
+          </span>
+        </div>
       </div>
     </div>
   );
