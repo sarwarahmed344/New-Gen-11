@@ -17,14 +17,14 @@ const SPOTS: Spot[] = [
   { num: "03", top: "74%", left: "37%" },
   { num: "06", top: "74%", left: "63%" },
   { num: "02", top: "72%", left: "85%" },
-  // MID
+  // MID — Hugo · Classified · Sae
   { num: "07", top: "48%", left: "22%" },
-  { num: "10", top: "44%", left: "50%" },
-  { num: "08", top: "48%", left: "78%" },
-  // FWD
-  { num: "05", top: "20%", left: "20%" },
+  { num: "01", top: "44%", left: "50%" },
+  { num: "10", top: "48%", left: "78%" },
+  // FWD — Loki · Kaiser · Bunny
+  { num: "08", top: "20%", left: "20%" },
   { num: "09", top: "14%", left: "50%" },
-  { num: "01", top: "20%", left: "80%" },
+  { num: "05", top: "20%", left: "80%" },
 ];
 
 export function Formation() {
