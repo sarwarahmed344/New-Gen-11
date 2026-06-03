@@ -116,13 +116,21 @@ export function PlayerGrid() {
                 <p className="mono text-[9px] tracking-[0.2em] text-muted-foreground uppercase leading-tight">
                   Identity Classified
                 </p>
-                <p className="mono text-[8px] tracking-[0.2em] text-muted-foreground/60 uppercase">
+                <p className="mono text-[8px] tracking-[0.2em] text-muted-foreground/60 uppercase mt-0.5">
                   Not yet revealed
                 </p>
+                <p className="mono text-[8.5px] tracking-[0.15em] text-foreground/80 uppercase mt-2 leading-snug normal-case italic">
+                  "{slot.tagline}"
+                </p>
+                {slot.next && (
+                  <p className="mono text-[8px] tracking-[0.25em] text-muted-foreground uppercase mt-2 blink-pulse">
+                    [ Next transmission: incoming ]
+                  </p>
+                )}
               </div>
-              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/80 z-20">
-                <p className="text-xs md:text-sm mono tracking-[0.3em] uppercase text-center px-4">
-                  The world is<br />not yet ready.
+              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-black/85 z-20 p-4">
+                <p className="text-[11px] md:text-xs mono tracking-[0.25em] uppercase text-center leading-relaxed">
+                  {slot.tagline}
                 </p>
               </div>
             </motion.div>

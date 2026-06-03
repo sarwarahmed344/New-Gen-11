@@ -3,6 +3,7 @@ import { Hero } from "@/components/Hero";
 import { PlayerGrid } from "@/components/PlayerGrid";
 import { PlayerFeature } from "@/components/PlayerFeature";
 import { Outro } from "@/components/Outro";
+import { Formation } from "@/components/Formation";
 import { featuredPlayers } from "@/lib/players";
 import { AuraProvider } from "@/lib/aura-context";
 import { ProgressBar, TopBar, SideNav, GlobalFX } from "@/components/GlobalUI";

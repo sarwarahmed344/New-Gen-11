@@ -139,6 +139,9 @@ export function PlayerFeature({ player }: { player: FeaturedPlayer }) {
                 </div>
               ))}
             </div>
+            <p className="mt-2 mono text-[9px] tracking-[0.25em] text-muted-foreground uppercase text-right">
+              Stats rated out of 99
+            </p>
           </div>
         </motion.div>
 
