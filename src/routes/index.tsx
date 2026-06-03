@@ -45,6 +45,7 @@ function Index() {
         {featuredPlayers.map((player) => (
           <PlayerFeature key={player.id} player={player} />
         ))}
+        <Formation />
         <Outro />
       </main>
     </AuraProvider>
